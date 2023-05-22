@@ -100,7 +100,7 @@ neck=dict(
             bbox_type='obb',
             num_classes=1,
             loss_mask=dict(
-                type='CrossEntropyLoss', use_mask=True, loss_weight=1.0))),
+                type='CrossEntropyLoss', use_mask=True, loss_weight=1.0))))
             #loss_mask_edge=dict(
                 #type='DiceLoss', use_sigmoid=False, loss_weight=1.0))),
             #loss_mask_edge=dict(
@@ -152,7 +152,7 @@ train_cfg = dict(
             add_gt_as_proposals=True),
         mask_size=28,
         pos_weight=-1,
-        debug=False)),
+        debug=False))
 test_cfg = dict(
     rpn=dict(
         nms_across_levels=False,
@@ -165,4 +165,4 @@ test_cfg = dict(
         score_thr=0.05,
         nms=dict(type='obb_nms', iou_thr=0.5),
         max_per_img=2000,
-        mask_thr_binary=0.5)))
+        mask_thr_binary=0.5))
