@@ -1,4 +1,4 @@
-# OSNet
+
 # Installation
 Create a conda virtual environment and activate it.
 ```
