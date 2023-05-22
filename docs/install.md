@@ -2,7 +2,7 @@
 # Installation
 Create a conda virtual environment and activate it.
 ```
-conda create -n os python=3.7
+conda create -n os python==3.7
 conda activate os
 ```
 install PyTorch and torchvision following the [official instructions](https://pytorch.org/),we used pytorch1.7.1 cuda10.1
