@@ -8,31 +8,7 @@ fp16 = dict(loss_scale=1.) #dynamic
 '''
 model = dict(
     type='OrientedRCNN',
-    #type='MaskRCNN',
-    pretrained='torchvision://resnet50',
-    #pretrained='open-mmlab://mmdet/mobilenet_v2',
-    backbone=dict(
-        type='ResNet',
-        #type='ResNet_atten',
-        #type='MobileNetV2',
-        depth=50,
-        num_stages=4,
-        out_indices=(0, 1, 2, 3),
-        frozen_stages=1,
-        norm_cfg=dict(type='BN', requires_grad=True),
-        norm_eval=True,
-        style='pytorch',
-        #init_cfg=dict(type='Pretrained', checkpoint='torchvision://resnet50')),
-        #init_cfg=dict(type='Pretrained', checkpoint='open-mmlab://mmdet/mobilenet_v2')),
-        #init_cfg=None),   #CoordAtt
-        plugins=[dict(cfg=dict(type='ContextBlock', ratio=1. / 16), stages=(False, True, True, True),position='after_conv3')]),
-        #plugins=[dict(cfg=dict(type='GeneralizedAttention',spatial_range=-1,num_heads=8,attention_type='0010',kv_stride=2),stages=(False, False, True, True),position='after_conv2')]),
-
-
-'''
-model = dict(
-    type='OrientedRCNN',
-    pretrained = '/root/autodl-tmp/OBBDetection-master_2/swin_tiny_patch4_window7_224.pth',#'https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth',
+    pretrained = 'https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth',
     backbone=dict(
         #_delete_=True,
         type='SwinTransformer',
