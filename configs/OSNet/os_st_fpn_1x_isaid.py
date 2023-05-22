@@ -4,8 +4,6 @@ _base_ = [
     '../../_base_/default_runtime.py'
 ]
 fp16 = dict(loss_scale=1.) #dynamic
-
-'''
 model = dict(
     type='OrientedRCNN',
     pretrained = 'https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth',
