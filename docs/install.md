@@ -23,6 +23,7 @@ mim install mmdet
 ```
 install OSNet
 ```
+cd OSNet
 pip install -r requirements/build.txt
 pip install mmpycocotools
 pip install -v -e .  # or "python setup.py develop"
