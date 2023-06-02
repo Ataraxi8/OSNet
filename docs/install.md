@@ -16,6 +16,7 @@ pip install -v -e .  # or "python setup.py develop"
 ```
 install mmcv-full and mmdet
 ```
+sudo pip install --upgrade urllib3==1.26.15
 pip install -U openmim
 mim install mmcv-full
 mim install mmdet
